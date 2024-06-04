@@ -31,12 +31,12 @@ const Home = () => {
             </div>
             <div className="h-[20px] w-[1px] bg-[#262626]"></div>
             <div className="flex items-center gap-[12px]">
-              <Link href="/">
+              <a href={meta.linkedIn} target="_blank">
                 <Linkedin />
-              </Link>
-              <Link href="/">
+              </a>
+              <a href={meta.github} target="_blank">
                 <Github />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
