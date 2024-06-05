@@ -81,7 +81,6 @@ export const meta = {
       name: "AWS",
       subHeading: "Cloud Services",
       Icon: Aws,
-      bg: "bg-slate-800",
     },
     {
       name: "Docker",

@@ -81,32 +81,26 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-2 lg:grid-cols-3 lg:gap-4">
-            {meta.techStack.map(
-              ({ Icon, name, subHeading, bg = "bg-white" }, idx) => (
+            {meta.techStack.map(({ Icon, name, subHeading }, idx) => (
+              <div
+                key={idx}
+                className="flex h-[57px] cursor-pointer items-center gap-[10px] rounded-[10px] border-[1px] border-[#262626] p-[10px]"
+              >
                 <div
-                  key={idx}
-                  className="flex h-[57px] cursor-pointer items-center gap-[10px] rounded-[10px] border-[1px] border-[#262626] p-[10px]"
+                  className={cn(
+                    "flex h-[35px] w-[35px] items-center justify-center overflow-hidden rounded-lg bg-white",
+                  )}
                 >
-                  <div
-                    className={cn(
-                      "flex h-[35px] w-[35px] items-center justify-center overflow-hidden rounded-lg",
-                      {
-                        "bg-white": !bg,
-                        [bg]: !!bg,
-                      },
-                    )}
-                  >
-                    <Icon />
-                  </div>
-                  <div>
-                    <h4 className="text-[14px] leading-[1.3em]">{name}</h4>
-                    <p className="text-[10px] font-light leading-[1.6em] text-[#FFFFFFCC] lg:text-[11.5px]">
-                      {subHeading}
-                    </p>
-                  </div>
+                  <Icon />
                 </div>
-              ),
-            )}
+                <div>
+                  <h4 className="text-[14px] leading-[1.3em]">{name}</h4>
+                  <p className="text-[10px] font-light leading-[1.6em] text-[#FFFFFFCC] lg:text-[11.5px]">
+                    {subHeading}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
