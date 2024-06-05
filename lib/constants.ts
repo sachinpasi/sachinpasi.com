@@ -1,20 +1,20 @@
-import Aws from "@/ui/Aws";
-import Docker from "@/ui/Docker";
-import Figma from "@/ui/Figma";
-import Framer from "@/ui/Framer";
-import Gsap from "@/ui/Gsap";
-import Koa from "@/ui/Koa";
-import Markdown from "@/ui/Markdown";
-import MongoDB from "@/ui/MongoDB";
-import NextJs from "@/ui/NextJs";
-import Node from "@/ui/Node";
-import Postgresql from "@/ui/Postgresql";
-import Prisma from "@/ui/Prisma";
-import React from "@/ui/React";
-import Redis from "@/ui/Redis";
-import Shadcn from "@/ui/Shadcn";
-import Tailwind from "@/ui/Tailwind";
-import TypeScript from "@/ui/TypeScript";
+import Aws from "@/ui/icon/Aws";
+import Docker from "@/ui/icon/Docker";
+import Figma from "@/ui/icon/Figma";
+import Framer from "@/ui/icon/Framer";
+import Gsap from "@/ui/icon/Gsap";
+import Koa from "@/ui/icon/Koa";
+import Markdown from "@/ui/icon/Markdown";
+import MongoDB from "@/ui/icon/MongoDB";
+import NextJs from "@/ui/icon/NextJs";
+import Node from "@/ui/icon/Node";
+import Postgresql from "@/ui/icon/Postgresql";
+import Prisma from "@/ui/icon/Prisma";
+import React from "@/ui/icon/React";
+import Redis from "@/ui/icon/Redis";
+import Shadcn from "@/ui/icon/Shadcn";
+import Tailwind from "@/ui/icon/Tailwind";
+import TypeScript from "@/ui/icon/TypeScript";
 
 export const meta = {
   name: "Sachin Pasi",

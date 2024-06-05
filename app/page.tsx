@@ -3,10 +3,10 @@
 import React, { useEffect } from "react";
 import { meta } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import Avatar from "@/ui/Avatar";
-import Github from "@/ui/Github";
-import Linkedin from "@/ui/Linkedin";
-import TechStack from "@/ui/TechStack";
+import Avatar from "@/ui/icon/Avatar";
+import Github from "@/ui/icon/Github";
+import Linkedin from "@/ui/icon/Linkedin";
+import TechStack from "@/ui/icon/TechStack";
 import useKeyPress from "@/hooks/useKeyPress";
 
 const Home = () => {
