@@ -24,6 +24,7 @@ export const meta = {
   subTagline: "Empowering Products with Solutions",
   description:
     "I'm a Software Developer passionate about bringing ideas to life and making them not just functional but truly delightful for users. I thrive on solving complex business problems and creating one-of-a-kind solutions that stand out.",
+  mailId: "sachinpasi2000@gmail.com",
   github: "https://github.com/sachinpasi",
   linkedIn: "https://www.linkedin.com/in/sachin-pasi-7713191b6/",
   techStack: [

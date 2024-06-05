@@ -1,14 +1,22 @@
+"use client";
+
+import React, { useEffect } from "react";
 import { meta } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Avatar from "@/ui/Avatar";
-import Figma from "@/ui/Figma";
 import Github from "@/ui/Github";
 import Linkedin from "@/ui/Linkedin";
 import TechStack from "@/ui/TechStack";
-import Link from "next/link";
-import React from "react";
+import useKeyPress from "@/hooks/useKeyPress";
 
 const Home = () => {
+  const keyPressed = useKeyPress();
+
+  useEffect(() => {
+    if (keyPressed === "s") {
+      window.location.href = `mailto:${meta.mailId}`;
+    }
+  }, [keyPressed]);
   return (
     <>
       <div className="mx-auto flex w-[90%] flex-col gap-y-14 pt-7 lg:w-[600px] lg:pt-12">
@@ -57,7 +65,12 @@ const Home = () => {
             <div className="hidden items-center gap-[7px] text-[15px] font-light text-[#FFFFFFCC] lg:flex">
               <p>Press</p>
               <div className="cursor-pointer rounded-[5px] border-[1px] border-[#3B3B3B] px-2">
-                <p className="text-[13px]">S</p>
+                <a
+                  href="mailto:sachinpasi2000@gmail.com"
+                  className="text-[13px]"
+                >
+                  S
+                </a>
               </div>
               <p>anytime to send me an email</p>
             </div>
