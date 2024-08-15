@@ -1,5 +1,6 @@
 import Aws from "@/ui/icon/Aws";
 import Docker from "@/ui/icon/Docker";
+import Express from "@/ui/icon/Express";
 import Figma from "@/ui/icon/Figma";
 import Framer from "@/ui/icon/Framer";
 import Gsap from "@/ui/icon/Gsap";
@@ -46,7 +47,7 @@ export const meta = {
     {
       name: "Express.js",
       subHeading: "Web Framework",
-      Icon: NextJs,
+      Icon: Express,
     },
     {
       name: "Koa.js",
