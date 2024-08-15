@@ -11,6 +11,11 @@ import useKeyPress from "@/hooks/useKeyPress";
 
 const Home = () => {
   const keyPressed = useKeyPress();
+  const buildDate =
+    process.env.NEXT_PUBLIC_BUILD_TIME ||
+    new Date().toISOString().split("T")[0];
+  const dateObj = new Date(buildDate);
+  const formattedDate = `${dateObj.toLocaleString("default", { month: "long" })} ${dateObj.getDate()}, ${dateObj.getFullYear()}`;
 
   useEffect(() => {
     if (keyPressed === "s") {
@@ -119,7 +124,7 @@ const Home = () => {
 
         <div className="h-[1px] w-full bg-[#262626]"></div>
 
-        <div className="mb-8">
+        <div className="mb-8 flex justify-between">
           <p className="mt-8 text-[12px] font-light text-white/90">
             © 2024 — Built with{"  "}
             <a
@@ -142,6 +147,9 @@ const Home = () => {
             >
               Vercel{"  "}
             </a>
+          </p>
+          <p className="mt-8 text-[12px] font-light text-white/90">
+            Last Updated : {formattedDate}
           </p>
         </div>
       </div>
