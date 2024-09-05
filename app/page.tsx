@@ -12,7 +12,7 @@ import useKeyPress from "@/hooks/useKeyPress";
 const Home = () => {
   const keyPressed = useKeyPress();
   const buildDate =
-    process.env.NEXT_PUBLIC_BUILD_TIME ||
+    process.env.BUILD_TIME ||
     new Date().toISOString().split("T")[0];
   const dateObj = new Date(buildDate);
   const formattedDate = `${dateObj.toLocaleString("default", { month: "long" })} ${dateObj.getDate()}, ${dateObj.getFullYear()}`;
