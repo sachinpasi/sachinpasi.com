@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { meta } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Avatar from "@/ui/icon/Avatar";
@@ -11,11 +11,21 @@ import useKeyPress from "@/hooks/useKeyPress";
 
 const Home = () => {
   const keyPressed = useKeyPress();
-  const buildDate =
-    process.env.BUILD_TIME ||
-    new Date().toISOString().split("T")[0];
-  const dateObj = new Date(buildDate);
-  const formattedDate = `${dateObj.toLocaleString("default", { month: "long" })} ${dateObj.getDate()}, ${dateObj.getFullYear()}`;
+  const [lastUpdated, setLastUpdated] = useState("");
+
+  useEffect(() => {
+    const timestamp = process.env.NEXT_PUBLIC_DEPLOY_TIMESTAMP;
+    if (timestamp) {
+      const date = new Date(Number(timestamp) * 1000); // Convert to milliseconds
+      setLastUpdated(
+        date.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        }),
+      );
+    }
+  }, []);
 
   useEffect(() => {
     if (keyPressed === "s") {
@@ -149,7 +159,7 @@ const Home = () => {
             </a>
           </p>
           <p className="mt-1 text-[12px] font-light text-white/90 lg:mt-8">
-            Last Updated : {formattedDate}
+            Last Updated : {lastUpdated}
           </p>
         </div>
       </div>
