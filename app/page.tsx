@@ -136,7 +136,7 @@ const Home = () => {
 
         <div className="mb-8 flex flex-col justify-between lg:flex-row">
           <p className="mt-8 text-[12px] font-light text-white/90">
-            © 2024 — Built with{"  "}
+            © 2025 — Built with{"  "}
             <a
               href="https://nextjs.org"
               className="hover:text-white hover:underline hover:decoration-rose-300/30 hover:underline-offset-2 focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500/70"
