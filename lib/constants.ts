@@ -120,4 +120,5 @@ export const meta = {
       Icon: Figma,
     },
   ],
+  blogUrl: process.env.NEXT_PUBLIC_BLOG_URL || "http://localhost:3000",
 };
