@@ -30,6 +30,40 @@ export const meta = {
   linkedIn: "https://www.linkedin.com/in/sachin-pasi-7713191b6/",
   resume:
     "https://drive.google.com/file/d/1HuOEox30QOC5qZ_GPL5DAZNDCUM54iI1/view",
+  experience: [
+    {
+      company: "Aditya Birla Sun Life Insurance",
+      role: "Manager — Software Engineer",
+      dates: "Jun 2025 — Present",
+      location: "Mumbai, India",
+      description:
+        "Driving config-driven product engineering and shaping the technical roadmap for next-gen digital insurance platforms.",
+    },
+    {
+      company: "Comunus Technologies",
+      role: "Software Engineer",
+      dates: "Apr 2024 — May 2025",
+      location: "Mumbai, India",
+      description:
+        "Shipped 6 end-to-end insurance products and replaced legacy flows with a Micro Frontend, channel-aware config system.",
+    },
+    {
+      company: "Wipro",
+      role: "Project Engineer",
+      dates: "May 2022 — Apr 2024",
+      location: "Mumbai, India",
+      description:
+        "Built RESTful APIs serving 1M+ requests/month for customer onboarding journeys handling 50k+ daily users.",
+    },
+    {
+      company: "Codeiator",
+      role: "Frontend Developer",
+      dates: "May 2021 — Dec 2021",
+      location: "Bhopal, India",
+      description:
+        "Built React.js + Redux applications and a real-estate platform with on-page SEO that lifted organic traffic ~15%.",
+    },
+  ],
   techStack: [
     {
       name: "React",

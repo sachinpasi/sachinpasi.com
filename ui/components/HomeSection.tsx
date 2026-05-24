@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { meta } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Avatar from "@/ui/icon/Avatar";
+import Briefcase from "@/ui/icon/Briefcase";
 import Github from "@/ui/icon/Github";
 import Linkedin from "@/ui/icon/Linkedin";
 import Resume from "@/ui/icon/Resume";
@@ -55,7 +56,7 @@ const HomeSection = ({ posts }: HomeSectionProps) => {
     return (
         <>
             <div className="mx-auto flex w-[90%] flex-col gap-y-14 pt-7 lg:w-[600px] lg:pt-12">
-                <div className="flex items-center">
+                <div className="reveal flex items-center" style={{ animationDelay: "0ms" }}>
                     <div className="flex items-center gap-[10px]">
                         <Avatar />
                         <div className="flex h-[41px] flex-col justify-center">
@@ -69,7 +70,10 @@ const HomeSection = ({ posts }: HomeSectionProps) => {
                     </div>
                     <div className="flex flex-shrink-0 flex-grow basis-0 items-center justify-end gap-[10px]">
                         <div className="flow-row hidden items-center gap-[10px] lg:flex">
-                            <div className="h-[7px] w-[7px] rounded-full bg-[#09b858]"></div>
+                            <div className="relative h-[7px] w-[7px]">
+                                <span className="absolute inset-0 animate-ping rounded-full bg-[#09b858] opacity-75"></span>
+                                <span className="relative block h-[7px] w-[7px] rounded-full bg-[#09b858]"></span>
+                            </div>
                             <p className="text-[12px] text-[#FFFFFFCC]">Open to work</p>
                         </div>
                         <div className="h-[20px] w-[1px] bg-[#262626]"></div>
@@ -91,7 +95,10 @@ const HomeSection = ({ posts }: HomeSectionProps) => {
                     </div>
                 </div>
 
-                <div className="float-start flex flex-col flex-nowrap items-start justify-center gap-[25px]">
+                <div
+                    className="reveal float-start flex flex-col flex-nowrap items-start justify-center gap-[25px]"
+                    style={{ animationDelay: "80ms" }}
+                >
                     <div className="flex flex-col items-start gap-1">
                         <div className="text-[20px] leading-[1.3em] lg:text-[28px]">
                             {meta.tagline}
@@ -132,7 +139,10 @@ const HomeSection = ({ posts }: HomeSectionProps) => {
                             </div>
                         </div>
                         <div className="flow-row flex max-w-[130px] items-center gap-[10px] rounded-lg border-[1px] border-[#262626] p-3 lg:hidden">
-                            <div className="h-[7px] w-[7px] rounded-full bg-[#09b858]"></div>
+                            <div className="relative h-[7px] w-[7px]">
+                                <span className="absolute inset-0 animate-ping rounded-full bg-[#09b858] opacity-75"></span>
+                                <span className="relative block h-[7px] w-[7px] rounded-full bg-[#09b858]"></span>
+                            </div>
                             <p className="text-[12px] text-[#FFFFFFCC]">Open to work</p>
                         </div>
                     </div>
@@ -140,12 +150,51 @@ const HomeSection = ({ posts }: HomeSectionProps) => {
 
                 <div className="h-[1px] w-full bg-[#262626]"></div>
 
-                <BlogPreview posts={posts.slice(0, 3)} />
+                <div className="reveal" style={{ animationDelay: "160ms" }}>
+                    <BlogPreview posts={posts.slice(0, 3)} />
+                </div>
 
                 <div className="h-[1px] w-full bg-[#262626]"></div>
 
+                <div className="reveal flex flex-col gap-[25px]" style={{ animationDelay: "240ms" }}>
+                    <div className="flex flex-col gap-[5px]">
+                        <Briefcase />
+                        <h3 className="text-[20px] font-medium leading-[1.3em]">
+                            Experience
+                        </h3>
+                        <p className="text-[14px] font-light leading-[1.8em] text-[#FFFFFFCC]">
+                            Companies I&apos;ve built for over the years.
+                        </p>
+                    </div>
+                    <ul className="relative flex flex-col gap-7 border-l border-[#262626] pl-6">
+                        {meta.experience.map((job, idx) => (
+                            <li
+                                key={idx}
+                                className="relative flex flex-col gap-1"
+                            >
+                                <span className="absolute -left-[28px] top-[7px] h-[9px] w-[9px] rounded-full bg-[#3B3B3B] ring-4 ring-black"></span>
+                                <div className="flex flex-wrap items-baseline justify-between gap-x-2">
+                                    <h4 className="text-[15px] leading-[1.3em] text-white">
+                                        {job.company}
+                                    </h4>
+                                    <p className="text-[11px] font-light text-[#8A8A8A] lg:text-[12px]">
+                                        {job.dates}
+                                    </p>
+                                </div>
+                                <p className="text-[12px] font-light text-[#FFFFFFCC] lg:text-[13px]">
+                                    {job.role} · {job.location}
+                                </p>
+                                <p className="mt-1 text-[12px] font-light leading-[1.6em] text-[#FFFFFF99] lg:text-[13px]">
+                                    {job.description}
+                                </p>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
 
-                <div className="flex flex-col gap-[25px]">
+                <div className="h-[1px] w-full bg-[#262626]"></div>
+
+                <div className="reveal flex flex-col gap-[25px]" style={{ animationDelay: "320ms" }}>
                     <div className="flex flex-col gap-[5px]">
                         <TechStack />
                         <h3 className="text-[20px] font-medium leading-[1.3em]">
@@ -159,7 +208,7 @@ const HomeSection = ({ posts }: HomeSectionProps) => {
                         {meta.techStack.map(({ Icon, name, subHeading }, idx) => (
                             <div
                                 key={idx}
-                                className="flex h-[57px] cursor-pointer items-center gap-[10px] rounded-[10px] border-[1px] border-[#262626] p-[10px]"
+                                className="flex h-[57px] cursor-pointer items-center gap-[10px] rounded-[10px] border-[1px] border-[#262626] p-[10px] transition-all duration-200 hover:-translate-y-[2px] hover:border-[#3B3B3B] hover:bg-[#0F0F0F]"
                             >
                                 <div
                                     className={cn(
@@ -181,7 +230,10 @@ const HomeSection = ({ posts }: HomeSectionProps) => {
 
                 <div className="h-[1px] w-full bg-[#262626]"></div>
 
-                <div className="mb-8 flex flex-col justify-between lg:flex-row">
+                <div
+                    className="reveal mb-8 flex flex-col justify-between lg:flex-row"
+                    style={{ animationDelay: "400ms" }}
+                >
                     <p className="mt-8 text-[12px] font-light text-white/90">
                         © 2026 — Built with{"  "}
                         <a
