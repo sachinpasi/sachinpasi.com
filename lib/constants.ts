@@ -21,13 +21,15 @@ export const meta = {
   name: "Sachin Pasi",
   twitterHandle: "",
   domain: "sachinpasi.com",
-  tagline: "Building Websites for 3+ Years",
+  tagline: "Building Websites for 4+ Years",
   subTagline: "Empowering Products with Solutions",
   description:
     "I'm a Software Developer passionate about bringing ideas to life and making them not just functional but truly delightful for users. I thrive on solving complex business problems and creating one-of-a-kind solutions that stand out.",
   mailId: "sachinpasi2000@gmail.com",
   github: "https://github.com/sachinpasi",
   linkedIn: "https://www.linkedin.com/in/sachin-pasi-7713191b6/",
+  resume:
+    "https://drive.google.com/file/d/1HuOEox30QOC5qZ_GPL5DAZNDCUM54iI1/view",
   techStack: [
     {
       name: "React",

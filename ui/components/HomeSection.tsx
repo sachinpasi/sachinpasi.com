@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import Avatar from "@/ui/icon/Avatar";
 import Github from "@/ui/icon/Github";
 import Linkedin from "@/ui/icon/Linkedin";
+import Resume from "@/ui/icon/Resume";
 import TechStack from "@/ui/icon/TechStack";
 import useKeyPress from "@/hooks/useKeyPress";
 import BlogPreview from "@/ui/components/BlogPreview";
@@ -46,6 +47,9 @@ const HomeSection = ({ posts }: HomeSectionProps) => {
         if (keyPressed === "s") {
             window.location.href = `mailto:${meta.mailId}`;
         }
+        if (keyPressed === "r") {
+            window.open(meta.resume, "_blank");
+        }
     }, [keyPressed]);
 
     return (
@@ -76,6 +80,13 @@ const HomeSection = ({ posts }: HomeSectionProps) => {
                             <a href={meta.github} target="_blank">
                                 <Github />
                             </a>
+                            <a
+                                href={meta.resume}
+                                target="_blank"
+                                aria-label="Resume"
+                            >
+                                <Resume />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -93,17 +104,32 @@ const HomeSection = ({ posts }: HomeSectionProps) => {
                         <p className="text-[14px] leading-[1.8em] text-[#FFFFFFCC] lg:text-[15px] lg:leading-[27px]">
                             {meta.description}
                         </p>
-                        <div className="hidden items-center gap-[7px] text-[15px] font-light text-[#FFFFFFCC] lg:flex">
-                            <p>Press</p>
-                            <div className="cursor-pointer rounded-[5px] border-[1px] border-[#3B3B3B] px-2">
-                                <a
-                                    href="mailto:sachinpasi2000@gmail.com"
-                                    className="text-[13px]"
-                                >
-                                    S
-                                </a>
+                        <div className="hidden flex-col gap-[10px] lg:flex">
+                            <div className="flex items-center gap-[7px] text-[15px] font-light text-[#FFFFFFCC]">
+                                <p>Press</p>
+                                <div className="cursor-pointer rounded-[5px] border-[1px] border-[#3B3B3B] px-2">
+                                    <a
+                                        href="mailto:sachinpasi2000@gmail.com"
+                                        className="text-[13px]"
+                                    >
+                                        S
+                                    </a>
+                                </div>
+                                <p>anytime to send me an email</p>
                             </div>
-                            <p>anytime to send me an email</p>
+                            <div className="flex items-center gap-[7px] text-[15px] font-light text-[#FFFFFFCC]">
+                                <p>Press</p>
+                                <div className="cursor-pointer rounded-[5px] border-[1px] border-[#3B3B3B] px-2">
+                                    <a
+                                        href={meta.resume}
+                                        target="_blank"
+                                        className="text-[13px]"
+                                    >
+                                        R
+                                    </a>
+                                </div>
+                                <p>to view my resume</p>
+                            </div>
                         </div>
                         <div className="flow-row flex max-w-[130px] items-center gap-[10px] rounded-lg border-[1px] border-[#262626] p-3 lg:hidden">
                             <div className="h-[7px] w-[7px] rounded-full bg-[#09b858]"></div>
@@ -157,7 +183,7 @@ const HomeSection = ({ posts }: HomeSectionProps) => {
 
                 <div className="mb-8 flex flex-col justify-between lg:flex-row">
                     <p className="mt-8 text-[12px] font-light text-white/90">
-                        © 2025 — Built with{"  "}
+                        © 2026 — Built with{"  "}
                         <a
                             href="https://nextjs.org"
                             className="hover:text-white hover:underline hover:decoration-rose-300/30 hover:underline-offset-2 focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500/70"
