@@ -29,7 +29,7 @@ export const meta = {
   github: "https://github.com/sachinpasi",
   linkedIn: "https://www.linkedin.com/in/sachin-pasi-7713191b6/",
   resume:
-    "https://drive.google.com/file/d/1HuOEox30QOC5qZ_GPL5DAZNDCUM54iI1/view",
+    "https://drive.google.com/file/d/11s3d5fp-jQgfV_SIURcQsxWW02MhwOdu/view?usp=sharing",
   experience: [
     {
       company: "Aditya Birla Sun Life Insurance",
