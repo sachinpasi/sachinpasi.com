@@ -2,6 +2,9 @@
   "name": "sachinpasi.com",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "BUILD_TIME=$(date +%Y-%m-%d) next build",
